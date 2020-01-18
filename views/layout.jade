@@ -11,9 +11,10 @@ html
           li
             a(href="/") Home
           li
-            a(href="/post/add") Add Post
+            a(href="/posts/add") Add Post
           li
             a(href="/categories/add") Add Category
+      != messages()
       block content
       footer
         p &copy; NodeBlog 2020

@@ -7,11 +7,13 @@ var session = require('express-session');
 var multer = require('multer');
 var upload = multer({ dest: './uploads' });
 var expressValidator = require('express-validator');
+
 var mongodb = require('mongodb');
 var db = require('monk')('localhost/nodeblog');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var postsRouter = require('./routes/posts');
+var categoriesRouter = require('./routes/categories');
 
 var app = express();
 
@@ -70,7 +72,8 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/posts', postsRouter);
+app.use('/categories', categoriesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
