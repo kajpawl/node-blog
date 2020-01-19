@@ -23,6 +23,10 @@ body {
   clear: both;
 }
 
+.post img {
+  width: 100%;
+}
+
 ul {
   padding: 0;
   margin: 0;
