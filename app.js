@@ -4,8 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
-var multer = require('multer');
-var upload = multer({ dest: './uploads' });
 var expressValidator = require('express-validator');
 
 var mongodb = require('mongodb');
